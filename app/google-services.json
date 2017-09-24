@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "592198071198",
+    "firebase_url": "https://medibluenet-ac043.firebaseio.com",
+    "project_id": "medibluenet-ac043",
+    "storage_bucket": "medibluenet-ac043.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592198071198:android:dacf4fa63ea299ec",
+        "android_client_info": {
+          "package_name": "com.example.nath4.medibluenet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592198071198-kvu6q9daln8t125ol0844hon0khurucl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nath4.medibluenet",
+            "certificate_hash": "0fd1bf621c00f27c99e5a799fcd117eadafe8df3"
+          }
+        },
+        {
+          "client_id": "592198071198-ea0ju6v0898ue965b6s7t38t2t8lihqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWaJTqWcEBWL86jPgmkUsmW4jcymEbG_U"
+        },
+        {
+          "current_key": "AIzaSyDs-GfKvLE13tJI7CLWX9BeKNRjnaM-H1U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592198071198-ea0ju6v0898ue965b6s7t38t2t8lihqq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592198071198:android:3be48ccf1d721814",
+        "android_client_info": {
+          "package_name": "com.utd.ece.medibluenet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592198071198-pjnhvhto71spol3cp512mqq3pu3tiij0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.utd.ece.medibluenet",
+            "certificate_hash": "0fd1bf621c00f27c99e5a799fcd117eadafe8df3"
+          }
+        },
+        {
+          "client_id": "592198071198-ea0ju6v0898ue965b6s7t38t2t8lihqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWaJTqWcEBWL86jPgmkUsmW4jcymEbG_U"
+        },
+        {
+          "current_key": "AIzaSyDs-GfKvLE13tJI7CLWX9BeKNRjnaM-H1U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592198071198-ea0ju6v0898ue965b6s7t38t2t8lihqq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
