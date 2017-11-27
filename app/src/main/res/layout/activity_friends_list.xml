@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.utd.ece.medibluenet.FriendListView">
+
+    <ListView
+        android:id="@+id/friendListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stackFromBottom="false"
+        android:divider="@android:color/transparent"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/item_friends"/>
+
+    <TextView
+        android:id="@+id/noFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/errorColor"
+        android:visibility="invisible"
+        android:text="Check back later. Your friends list is empty..."
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"/>
+
+    <ProgressBar
+        android:id="@+id/friendsListProgressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

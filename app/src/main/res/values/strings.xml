@@ -4,9 +4,16 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <!--Buttons-->
+    <string name="send_frequest">Send Friend Request</string>
+    <string name="approve_request">Approve Request</string>
+    <string name="denny_request">Denny Request</string>
+    <string name="remove">Remove</string>
     <string name="action_logout">Logout</string>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <string name="title_activity_friend_biometric_selector">FriendBiometricSelector</string>
 </resources>

@@ -3,9 +3,6 @@ package com.utd.ece.medibluenet;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
+import android.view.View;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -36,7 +33,7 @@ public class MainActivity extends AppCompatActivity
 
     //Firebase Instance Variables (For Writing and Reading)
     private FirebaseDatabase mFirebaseDatabase; //firebase databaseobject -- entry point for app to access fbase
-    private DatabaseReference mMessagesDatabaseReference; //dbase reference object - class that references specific part of databse
+        private DatabaseReference mMessagesDatabaseReference; //dbase reference object - class that references specific part of databse
     private ChildEventListener mChildEventListener; //for reading from FireBase
     //Firebase Instance Vars (For Authentication)
     private FirebaseAuth mFirebaseAuth;
@@ -75,13 +72,18 @@ public class MainActivity extends AppCompatActivity
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                //FirebaseAuth  parameter can guarantee if user is loged in or not (different from FireBaseAuth init up top
+                //FirebaseAuth  parameter can guarantee if user is logged in or not (different from FireBaseAuth init up top
                 FirebaseUser user = firebaseAuth.getCurrentUser();
+
                 if (user != null){
                     //user is signed in
                     Toast.makeText(MainActivity.this, "You're signed in. Welcome, " + user.getDisplayName() + ".", Toast.LENGTH_SHORT).show();
                     //add 2 helper methods
                     onSignedInInit(user.getDisplayName());
+                    //set username in navigation window
+//                    TextView nameTextView = (TextView) findViewById(R.id.userName);
+//                    nameTextView.setText(user.getDisplayName());
+
                 }//end if
                 else{
                     //user is signed out
@@ -142,18 +144,22 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_friends) {
+            //change view to friends
+            startActivity(new Intent(MainActivity.this, FriendListView.class));
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_findfriend) {
+            //change view to find friends
+            startActivity(new Intent(MainActivity.this, RequestFriend.class));
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_requests) {
+            //change view to friend requests
+            startActivity(new Intent(MainActivity.this, FriendRequestsListView.class));
 
         } else if (id == R.id.nav_share) {
-
+            //TODO: Change to some other shit
         } else if (id == R.id.nav_send) {
-
+            //TODO: Change to some other shit
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -249,5 +255,14 @@ public class MainActivity extends AppCompatActivity
         mUsername = ANONYMOUS;
         detachDatabaseReadListener();
     }//end onSignedOutInit
+
+    //biometric onClick
+    public void displayBiometric(View v){
+        Intent i = new Intent(this, BiometricGraphView.class);
+        i.putExtra("biometric",v.getTag().toString());
+        startActivity(i);
+    }//end biometricOnClick
+
+
 
 }//end MainActivity

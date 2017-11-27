@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/friendsFullNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:text="Friend's Full Name" />
+
+    <TextView
+        android:id="@+id/friendsEmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:text="Friend's Email" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/viewBioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Biometrics"
+            android:onClick="viewBiometricOnClick" />
+        <View
+            android:layout_width="120dp"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/removeFriendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="removeFriendOnClick"
+            android:text="Remove"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+</LinearLayout>
